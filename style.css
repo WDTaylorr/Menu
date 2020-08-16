@@ -1,0 +1,111 @@
+:root{
+  --mainColor:#c5905f;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f1f5f8;
+}
+
+.title{
+  text-align: center;
+  margin:2rem  0;
+  position: relative;
+}
+
+.title h1{
+  font-size: 2.4rem;
+  color:#2c2a42;
+  letter-spacing: 2px;
+}
+
+span#line{
+  width:80px;
+  height:4px;
+  background: var(--mainColor);
+  position: absolute;
+  top:75px;
+  left:175px;
+}
+
+.food-button{
+  background: transparent;
+  border: 2px var(--mainColor) solid;
+  padding:.5rem;
+  border-radius: 7px;
+  color:#ad874e;
+  transition: background 0.5s ease-in-out;
+  outline:none;
+  margin:0 .75rem;
+}
+
+.food-button:hover{
+  background: var(--mainColor);
+  color:#fff;
+  cursor: pointer;
+}
+
+section#menu{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  width:80vw;
+  gap:30px;
+}
+
+img#menu-image{
+  width:200px;
+  border: 4px var(--mainColor) solid;
+  border-radius: 10px;
+  height:150px;
+  object-fit: cover;
+}
+
+
+
+.menu-item{
+  display:flex;
+}
+
+.menu-item-content{
+  padding:.5rem;
+  width:100%;
+}
+.menu-item-title{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px #2c2a42 dotted;
+}
+
+.menu-item-title h3{
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color:#2c2a42
+}
+
+.price{
+  color:var(--mainColor);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.description p{
+  color:#738c98;
+  font-size: 1rem;
+}
+
+@media(max-width:1045px){
+  section#menu{
+    grid-template-columns:1fr;
+    width:90vw;
+    gap:10px;
+  }
+
+}
